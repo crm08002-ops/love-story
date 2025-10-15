@@ -10,18 +10,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@100;400;700;900&display=swap">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FDF4F5; position: relative; overflow-x: hidden; }
-        .text-dancing { font-family: 'Dancing Script', cursive; }
-        .header-bg { background-color: #BF4080; background-image: linear-gradient(135deg, #A83372 0%, #D88CBF 100%); color: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-        .card-bg { background-color: #FFFFFF; transition: all 0.3s ease; }
-        .card-bg:hover { box-shadow: 0 15px 30px -5px rgba(216,140,191,0.3); transform: translateY(-2px); }
-        .letter-header { cursor: pointer; }
-        .letter-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; padding: 0 1.5rem; }
-        .letter-content.active { max-height: 600px; padding-top: 1rem; padding-bottom: 1.5rem; }
-        #rain-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 10; }
-        @keyframes subtle-rain-fall { 0% { transform: translate3d(0,0,0);} 100% { transform: translate3d(10vw,100vh,0);} }
-        .raindrop { position: absolute; background: rgba(187,230,255,0.6); height: 20px; width: 1px; animation: subtle-rain-fall linear infinite; filter: blur(0.5px); transform-origin: top center; }
-    </style>
+    body { 
+        font-family: 'Inter', sans-serif; 
+        background: linear-gradient(to bottom, #2C2C54 0%, #6A4C93 100%); /* Deep evening gradient */
+        position: relative; 
+        overflow-x: hidden; 
+    }
+    .text-dancing { font-family: 'Dancing Script', cursive; }
+    .header-bg { 
+        background-color: #BF4080; 
+        background-image: linear-gradient(135deg, #A83372 0%, #D88CBF 100%); 
+        color: white; 
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); 
+    }
+    .card-bg { 
+        background-color: #FFFFFF; 
+        transition: all 0.3s ease; 
+    }
+    .card-bg:hover { 
+        box-shadow: 0 15px 30px -5px rgba(216,140,191,0.3); 
+        transform: translateY(-2px); 
+    }
+    .letter-header { cursor: pointer; }
+    .letter-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; padding: 0 1.5rem; }
+    .letter-content.active { max-height: 600px; padding-top: 1rem; padding-bottom: 1.5rem; }
+    #rain-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 10; }
+    @keyframes subtle-rain-fall { 0% { transform: translate3d(0,0,0);} 100% { transform: translate3d(10vw,100vh,0);} }
+    .raindrop { 
+        position: absolute; 
+        background: rgba(187,230,255,0.8); /* slightly stronger blue for visibility */
+        height: 20px; 
+        width: 1px; 
+        animation: subtle-rain-fall linear infinite; 
+        filter: blur(0.5px); 
+        transform-origin: top center; 
+    }
+</style>
+
 </head>
 <body class="min-h-screen">
     <div id="rain-container"></div>
