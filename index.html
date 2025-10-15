@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Year of Us: Mariem & Aziz</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Fonts: Inter (Body) and Dancing Script (Titles) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@100;400;700;900&display=swap">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FDF4F5; position: relative; overflow-x: hidden; }
+        .text-dancing { font-family: 'Dancing Script', cursive; }
+        .header-bg { background-color: #BF4080; background-image: linear-gradient(135deg, #A83372 0%, #D88CBF 100%); color: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .card-bg { background-color: #FFFFFF; transition: all 0.3s ease; }
+        .card-bg:hover { box-shadow: 0 15px 30px -5px rgba(216,140,191,0.3); transform: translateY(-2px); }
+        .letter-header { cursor: pointer; }
+        .letter-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; padding: 0 1.5rem; }
+        .letter-content.active { max-height: 600px; padding-top: 1rem; padding-bottom: 1.5rem; }
+        #rain-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 10; }
+        @keyframes subtle-rain-fall { 0% { transform: translate3d(0,0,0);} 100% { transform: translate3d(10vw,100vh,0);} }
+        .raindrop { position: absolute; background: rgba(187,230,255,0.6); height: 20px; width: 1px; animation: subtle-rain-fall linear infinite; filter: blur(0.5px); transform-origin: top center; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div id="rain-container"></div>
+    <div class="fixed top-4 right-4 md:top-8 md:right-10 transform hover:scale-110 transition duration-300 z-50 w-8 h-8 md:w-10 md:h-10" title="Our little shadow cat">
+        <svg viewBox="0 0 100 100" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 40c-10 0-18 8-18 18 0 10 5 18 18 18 10 0 18-8 18-18 0-10-5-18-18-18z" fill="currentColor"/>
+            <path d="M40 30l5-10h10l5 10z" fill="currentColor"/>
+            <circle cx="50" cy="40" r="15" fill="currentColor"/>
+        </svg>
+    </div>
+    <div class="fixed bottom-4 left-4 md:bottom-8 md:left-10 w-16 h-16 rounded-full overflow-hidden shadow-xl border-4 border-yellow-400 transform hover:rotate-6 transition duration-300 z-50" title="Ooooweee! Happy Anniversary! - REPLACE THIS IMAGE">
+        <img src="https://placehold.co/100x100/FACC15/6B400D?text=PBH" alt="Mr. Poopybutthole Placeholder" class="w-full h-full object-cover"/>
+    </div>
+
+    <div id="app" class="max-w-4xl mx-auto p-4 md:p-8 relative z-20">
+        <header class="header-bg p-8 rounded-xl text-center mb-12">
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-2 text-dancing">One Amazing Year</h1>
+            <h2 class="text-4xl md:text-5xl font-light mb-4 text-dancing">Mariem & Aziz Ben Aicha</h2>
+            <p class="text-xl font-semibold opacity-90 border-t border-white border-opacity-30 pt-4 mt-4">Since December 26, 2024</p>
+        </header>
+
+        <section class="mb-12">
+            <div class="card-bg p-6 rounded-xl shadow-lg border-2 border-pink-200">
+                <p class="text-pink-800 text-lg md:text-xl italic">"My Dearest Aziz, this little corner of the internet is dedicated to you and all the amazing memories we've made this past year. Happy Anniversary! I love you."</p>
+                <p class="text-right mt-4 text-pink-600 font-semibold">- Mariem Jaidi</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h3 class="text-4xl font-bold text-center text-pink-800 mb-8 text-dancing">Our Journey in Pictures</h3>
+            <div id="image-gallery" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div class="card-bg p-2 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/400x400/A83372/FFFFFF?text=Picture+1" alt="Our First Date" class="w-full h-auto object-cover rounded-lg aspect-square">
+                    <p class="text-sm text-center text-pink-600 mt-2">The Day We Met (Dec 21, 2024)</p>
+                </div>
+                <div class="card-bg p-2 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/400x500/D88CBF/333333?text=Picture+2" alt="Trip to the Beach" class="w-full h-auto object-cover rounded-lg aspect-[4/5]">
+                    <p class="text-sm text-center text-pink-600 mt-2">Summer Trip</p>
+                </div>
+                <div class="card-bg p-2 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/500x400/A83372/FFFFFF?text=Picture+3" alt="Funny Moment" class="w-full h-auto object-cover rounded-lg aspect-square">
+                    <p class="text-sm text-center text-pink-600 mt-2">Our Silly Side</p>
+                </div>
+                <div class="card-bg p-2 rounded-lg shadow-md hover:shadow-xl sm:col-span-2">
+                    <img src="https://placehold.co/800x300/D88CBF/333333?text=Picture+4+-+Long+Image" alt="Vacation Sunset" class="w-full h-auto object-cover rounded-lg aspect-[8/3]">
+                    <p class="text-sm text-center text-pink-600 mt-2">Sunset View</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h3 class="text-4xl font-bold text-center text-pink-800 mb-8 text-dancing">Special Letters from Mariem</h3>
+            <div id="letters-container" class="space-y-4"></div>
+        </section>
+    </div>
+
+    <script>
+        const letters = [
+            {
+                title: "To My love beyond love",
+                date: "1 year full of love",
+                content: "bibi habibi, one year ago, you walked into my life and turned it into the most exciting adventure. I never knew I could laugh so hard or feel so understood. Thank you for every late-night conversation, every spontaneous trip, and every moment you’ve just been 'you'. Here's to many, many more years together! I cherish you.",
+                icon: "💌"
+            },
+            {
+                title: "The Night We Met",
+                date: "December 21, 2024",
+                content: "Do you remember that first night, December 21st, when we finally met in person? We hid in the shade of my building and talked for hours, even as the rain poured down around us. It felt like we were the only two people in the world. That night, under the cover of the rain, I knew this was the start of something truly special.",
+                icon: "☔"
+            },
+            {
+                title: "First kiss",
+                date: "The day i took my first breath",
+                content: "I’ll never forget that moment on the stairs — the quiet air around us, the way my heart raced when you looked at me and asked me to be yours. And then, that first kiss... soft, shy, and perfect. Everything around us faded, and it felt like the world stopped for a second.",
+                icon: "💖"
+            }
+        ];
+
+        const lettersContainer = document.getElementById('letters-container');
+        const rainContainer = document.getElementById('rain-container');
+        const numDrops = 60;
+
+        function initializeRain() {
+            for (let i = 0; i < numDrops; i++) {
+                const drop = document.createElement('div');
+                drop.classList.add('raindrop');
+                drop.style.left = `${Math.random() * 100}vw`;
+                drop.style.animationDelay = `${Math.random() * -15}s`;
+                drop.style.animationDuration = `${5 + Math.random() * 5}s`;
+                drop.style.transform = `rotate(${5 + Math.random() * 5}deg)`;
+                rainContainer.appendChild(drop);
+            }
+        }
+
+        function renderLetters() {
+            letters.forEach((letter, index) => {
+                const letterHtml = `
+                    <div class='card-bg rounded-xl shadow-lg border border-pink-100'>
+                        <div id='header-${index}' class='letter-header flex justify-between items-center p-6 border-b border-pink-100 hover:bg-pink-50 rounded-t-xl' onclick='toggleLetter(${index})'>
+                            <h4 class='text-xl font-bold text-pink-700 flex items-center'>
+                                <span class='text-3xl mr-3'>${letter.icon}</span> ${letter.title}
+                            </h4>
+                            <span class='text-pink-500 font-medium hidden sm:block'>${letter.date}</span>
+                            <span id='arrow-${index}' class='text-pink-700 text-2xl transform transition-transform duration-300'>&#9660;</span>
+                        </div>
+                        <div id='content-${index}' class='letter-content text-pink-900 leading-relaxed text-base md:text-lg'>
+                            ${letter.content.split('\n').map(p => `<p class='mb-4'>${p}</p>`).join('')}
+                        </div>
+                    </div>
+                `;
+                lettersContainer.innerHTML += letterHtml;
+            });
+        }
+
+        function toggleLetter(index) {
+            const content = document.getElementById(`content-${index}`);
+            const arrow = document.getElementById(`arrow-${index}`);
+            document.querySelectorAll('.letter-content.active').forEach(c => {
+                if (c.id !== `content-${index}`) c.classList.remove('active');
+            });
+            document.querySelectorAll('[id^="arrow-"]').forEach(a => {
+                if (a.id !== `arrow-${index}`) a.style.transform = 'rotate(0deg)';
+            });
+            content.classList.toggle('active');
+            arrow.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderLetters();
+            initializeRain();
+        });
+    </script>
+</body>
+</html>
